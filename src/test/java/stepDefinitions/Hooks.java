@@ -1,8 +1,10 @@
 package stepDefinitions;
 
 import io.cucumber.java.After;
+import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
 import utils.BaseClass;
+import utils.ReportGenerator;
 
 public class Hooks {
 
@@ -12,9 +14,10 @@ public class Hooks {
     }
 
     @After
-    public void tearDown()
-    {
+    public void tearDown() {
+
         BaseClass.quitDriver();
     }
+
 
 }

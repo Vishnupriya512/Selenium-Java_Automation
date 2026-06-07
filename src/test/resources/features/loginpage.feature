@@ -14,7 +14,7 @@ Feature: Login functionality for Saucedemo
     And user clicks login button
     Then user should see products page
 
-  @Regression @Negative
+  @Regression @Negative @vk150
   Scenario: Login with locked out user
     Given user is on login page
     When user enters username "locked_out_user" and password "secret_sauce"

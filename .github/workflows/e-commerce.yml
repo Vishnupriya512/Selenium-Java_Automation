@@ -3,6 +3,9 @@ on: push
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      SAUCE_USERNAME : oauth-kannanvishnupriya840-4f22f
+      SAUCE_ACCESS_KEY : 5e679d10-5244-4950-ab4a-e7119f51adf6
     steps:
       - uses: actions/checkout@v2
       - name: Set up Java

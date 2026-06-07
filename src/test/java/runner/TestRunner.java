@@ -19,7 +19,6 @@ import org.testng.annotations.AfterClass;
 public class TestRunner extends AbstractTestNGCucumberTests {
         @AfterClass(alwaysRun=true)
         public void generateHTMLReport(){
-                super.tearDownClass();
                 utils.ReportGenerator.generateReport();
         }
 }

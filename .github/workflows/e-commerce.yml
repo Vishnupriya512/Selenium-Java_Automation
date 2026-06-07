@@ -1,0 +1,19 @@
+name: E-Commerce Tests
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Java
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+      - name: Run Tests
+        run: mvn clean test
+      - name: Upload Reports
+        uses: actions/upload-artifact@v2
+        with:
+          name: cucumber-reports
+          path: target/cucumber-reports/
